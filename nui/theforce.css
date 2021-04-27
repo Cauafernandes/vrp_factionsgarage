@@ -1,0 +1,215 @@
+body {
+    font-family: 'bahnschrift', sans-serif;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+#estacionamento {
+    background-color: rgba(0, 0, 0, 0.35);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+    height: 531px;
+    width: 835px;
+    left: 50%;
+    top: 50%;
+    display: none;
+}
+
+#titulo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    height: 50px;
+    width: 100%;
+}
+
+#titulo #nome {
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    padding: 8px;
+    width: 495px;
+    height: 100%;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    transition: 0.3s all;
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    color: #CCC;
+    height: 100%;
+    width: 150px;
+}
+
+.btn p {
+    font-size: 18px;
+}
+
+.btn img {
+    margin-left: 8px;
+    max-width: 20px;
+}
+
+.btn:hover {
+    background-color: #EACB66;
+    color: #FFF;
+}
+
+#carros {
+    height: calc(100% - 60px);
+    padding-top: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+    display: flex;
+    width: 830px;
+    padding: 8px;
+}
+
+.carro {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s all;
+    margin: 0 3px 10px;
+    border-radius: 5px;
+    position: relative;
+    min-height: 438px;
+    max-width: 265px;
+    display: table;
+    height: auto;
+    width: 265px;
+    padding: 8px;
+}
+
+.carro .imagem {
+    border-radius: 5px;
+    height: 160px;
+    width: 100%;
+}
+
+.carro .imagem img {
+    border-radius: 5px;
+    height: 160px;
+    width: 100%;
+}
+
+.carro .nome {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    min-height: 56px;
+    font-size: 18px;
+    padding: 6px 0;
+    color: white;
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+.carro:nth-child(3n+1) {
+    margin-left: 0;
+    clear: both;
+}
+
+.carro:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.carro:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.carro.active {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.box {
+    background-color: rgba(184, 184, 184, 0.35);
+    border-radius: 5px;
+    height: auto;
+    padding: 8px;
+    width: 100%;
+}
+
+.box:not(:first-child) {
+    margin-top: 10px;
+}
+
+.box .titulo {
+    border-bottom: 1px solid rgba(184, 184, 184, 0.35);
+    color: rgba(184, 184, 184, 0.35);
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: auto;
+    width: 100%;
+}
+
+.box .valor {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.box .btn.comprar {
+    background-color: #d4edda;
+    text-transform: uppercase;
+    border-color: #c3e6cb;
+    transition: 0.3s all;
+    text-align: center;
+    padding: 10px 8px;
+    color: #155724;
+    margin-top: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.box .btn.comprar:hover {
+    background-color: #c3e6cb;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+}
